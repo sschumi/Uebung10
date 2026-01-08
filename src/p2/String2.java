@@ -9,11 +9,11 @@ public class String2 implements Editable {
     }
 
     public void addPrefix(String s){
-        mainString = String.join(s, mainString);
+        mainString = s +mainString;
     }
 
     public void addPostfix(String s){
-        mainString = String.join(mainString, s);
+        mainString = mainString+s;
     }
 
 }
