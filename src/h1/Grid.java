@@ -12,13 +12,13 @@ public class Grid {
             }
         }
 
-        for (int i = 0; i < cells.length; i++) {
+        for (int i = 0; i < cells.length; i++) { // Cell cell : cells
             if (cells[i].getIndexRow() >= 0 && cells[i].getIndexRow() < gridRows && cells[i].getIndexCol() >= 0 && cells[i].getIndexCol() < gridCols) {
                 gridArray[cells[i].getIndexRow()][cells[i].getIndexCol()].setAlive(true);
             }
         }
 
-        for (int i = 0; i < gridArray.length; i++) {
+        for (int i = 0; i < gridArray.length; i++) { // Cell[] row: this.gridArray
             for (int j = 0; j < gridArray[0].length; j++) {
                 gridArray[i][j].countLivingNeighbors(gridArray);
             }
@@ -26,8 +26,8 @@ public class Grid {
     }
 
     public void computeNextGen() {
-        for (int i = 0; i < gridArray.length; i++) {
-            for (int j = 0; j < gridArray[0].length; j++) {
+        for (int i = 0; i < gridArray.length; i++) { // Cell[] row: this.gridArray
+            for (int j = 0; j < gridArray[0].length; j++) { // Cell cell : row
                 gridArray[i][j].setAlive(gridArray[i][j].getIsAliveNextGen());
             }
         }

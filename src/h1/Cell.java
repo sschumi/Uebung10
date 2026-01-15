@@ -36,11 +36,11 @@ public class Cell {
                }
            }
        }
-       numLivingNeighbors = count;
-       decideNextStatus();
+       this.numLivingNeighbors = count;
+       this.decideNextStatus();
     }
 
-    public void decideNextStatus(){
+    private void decideNextStatus(){
         if(this.alive){
             if (numLivingNeighbors == 2 || numLivingNeighbors == 3){
             this.isAliveNextGen = true;
@@ -71,7 +71,7 @@ public class Cell {
         this.indexCol = indexCol;
     }
 
-    public boolean getAlive(){
+    public boolean getAlive(){ // isAlive() !!!
         return alive;
     }
     public void setAlive(boolean alive){
